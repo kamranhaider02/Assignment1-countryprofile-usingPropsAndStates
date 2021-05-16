@@ -24,7 +24,7 @@ const CountryList = (props) => {
   }
   return (
     <div>
-      <h1>Select a Country to see its details</h1>
+      <h1>{country ==='' ? 'Select a Country to see its details':'' }</h1>
      <div>
      <form>
         <select onChange={(e) => setcountry(e.target.value)}>
@@ -37,7 +37,7 @@ const CountryList = (props) => {
         </select>
       </form>
      </div>
-     {country !=='' ? selectedCountryforDetails():'Please select a country from dropdown'}
+     {country !=='' ? selectedCountryforDetails():''}
     </div>
   );
 };
